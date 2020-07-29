@@ -1,0 +1,43 @@
+# This is a comment
+# indentation is really important in YAML
+name: Amit
+names: #It defines an array
+  - Hi
+  - Hello
+  - Namaste
+
+# To escape # char, we can put it in quotes to be treated as string
+pound_sign: "#"
+
+#defining an object
+book:
+  author: JK Rowling
+  name: Harry Potter
+
+#booleans
+#Types of Truthy values
+truth1: yes
+truth2: True
+truth3: true
+
+#negations
+false1: False
+false2: false
+false3: no
+
+string_with_quote: "It's raining today!"
+
+string_with_colon: "Me: I'm awesome"
+
+#This will form an string with new lines as they appear
+string_including_new_lines: |
+  this is a string that can be defined in multiple lines,
+  in which new lines are
+  also included
+
+#This will form only one line string
+string_excluding_new_lines: >
+  this is string
+  that has a single line
+  what you see is a hoax
+
