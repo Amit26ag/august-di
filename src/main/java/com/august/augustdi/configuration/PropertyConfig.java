@@ -14,7 +14,8 @@ import org.springframework.core.env.Environment;
 //@PropertySource("classpath:mymusic.properties")
 @PropertySources({
         @PropertySource("classpath:mymusic.properties"),
-        @PropertySource("classpath:music2.properties")
+        @PropertySource("classpath:music2.properties"),
+        @PropertySource("classpath:myproperties.yml")
 })
 public class PropertyConfig {
 
@@ -37,6 +38,12 @@ public class PropertyConfig {
     @Value("${music.mymusic.fav.singer}")
     String favSinger;
 
+    @Value("${name}")
+    String bookName;
+
+    @Value("${string_including_new_lines}")
+    String bookAuthor;
+
     @Bean
     public MusicProvider musicProvider() {
         MusicProvider musicProvider = new MusicProvider();
@@ -47,6 +54,9 @@ public class PropertyConfig {
 
         System.out.println(musicProvider);
         System.out.println(favSinger);
+
+        System.out.println(bookName);
+        System.out.println(bookAuthor);
 
         String pathEnvVar = environment.getProperty("Path");
         System.out.println(String.join("\n", pathEnvVar == null ? new String[0] : pathEnvVar.split(";")));

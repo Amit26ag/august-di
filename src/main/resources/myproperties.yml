@@ -10,9 +10,6 @@ names: #It defines an array
 pound_sign: "#"
 
 #defining an object
-book:
-  author: JK Rowling
-  name: Harry Potter
 
 #booleans
 #Types of Truthy values
@@ -41,3 +38,8 @@ string_excluding_new_lines: >
   that has a single line
   what you see is a hoax
 
+___
+spring:
+  profile: HIN
+
+name: August
