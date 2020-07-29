@@ -34,6 +34,9 @@ public class PropertyConfig {
     @Value("${Path}")
     String sysUser;
 
+    @Value("${music.mymusic.fav.singer}")
+    String favSinger;
+
     @Bean
     public MusicProvider musicProvider() {
         MusicProvider musicProvider = new MusicProvider();
@@ -43,6 +46,7 @@ public class PropertyConfig {
         musicProvider.setPassword(password);
 
         System.out.println(musicProvider);
+        System.out.println(favSinger);
 
         String pathEnvVar = environment.getProperty("Path");
         System.out.println(String.join("\n", pathEnvVar == null ? new String[0] : pathEnvVar.split(";")));
